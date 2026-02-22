@@ -1,0 +1,11 @@
+# sysmon rc file, 
+# SA part, System team.
+
+service sysmon /system/bin/sysmon
+    class core
+    user system
+    group system readproc
+    oneshot
+
+on property:vold.decrypt=trigger_load_persist_props
+    start sysmon

@@ -1,0 +1,31 @@
+on boot
+    # Permissions for NAD
+    symlink /dev/block/platform/11120000.ufs/by-name/NAD_REFER /dev/block/NAD_REFER
+    chown system radio /sys/class/sec/sec_nad/nad_stat
+    chmod 0664 /sys/class/sec/sec_nad/nad_stat
+    chown system radio /sys/class/sec/sec_nad/nad_erase
+    chmod 0664 /sys/class/sec/sec_nad/nad_erase
+    chown system radio /sys/class/sec/sec_nad/nad_acat
+    chmod 0664 /sys/class/sec/sec_nad/nad_acat
+    chown system radio /sys/class/sec/sec_nad/nad_dram
+    chmod 0664 /sys/class/sec/sec_nad/nad_dram
+    chown system radio /sys/class/sec/sec_nad/nad_all
+    chmod 0664 /sys/class/sec/sec_nad/nad_all
+    chown system radio /sys/class/sec/sec_nad/nad_support
+    chmod 0664 /sys/class/sec/sec_nad/nad_support
+    chown system radio /sys/class/sec/sec_nad/nad_api
+    chmod 0664 /sys/class/sec/sec_nad/nad_api
+    chown system radio /sys/class/sec/sec_nad/nad_version
+    chmod 0664 /sys/class/sec/sec_nad/nad_version
+    chown system radio /dev/block/NAD_REFER
+    chmod 0664 /dev/block/NAD_REFER
+    chown system radio /sys/class/sec/sec_nad_balancer/balancer
+    chmod 0664 /sys/class/sec/sec_nad_balancer/balancer
+    chown system radio /sys/class/sec/sec_nad_balancer/status
+    chmod 0664 /sys/class/sec/sec_nad_balancer/status
+    chown system radio /sys/class/sec/sec_nad_balancer/timeout
+    chmod 0664 /sys/class/sec/sec_nad_balancer/timeout
+
+    # Permissions for SEC_DETECT
+    chown system radio /sys/class/sec/sec_detect_conn/enabled
+    chmod 0664 /sys/class/sec/sec_detect_conn/enabled

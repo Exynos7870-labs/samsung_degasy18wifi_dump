@@ -1,0 +1,5 @@
+on boot
+# Full logging service - logcatprocess
+service FlexibleLog /system/bin/FlexibleLog
+    class main
+    user root
